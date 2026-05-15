@@ -86,7 +86,7 @@ const Hero = () => {
 
           <div className="stat-item">
             <p>Projects Done</p>
-            <span>3+ Real Projects complated</span>
+            <span>3+ Real Projects completed </span>
 
           </div>
 

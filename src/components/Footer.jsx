@@ -44,7 +44,7 @@ const Footer = () => {
             <a href="https://github.com/kunal0709" target="_blank" rel="noreferrer" title="Github"><FaGithub /></a>
             <a href="https://x.com/kunal_kunal09" target="_blank" rel="noreferrer" title="Twitter"><FaTwitter /></a>
             <a href="https://www.instagram.com/_its_kuku_09/" target="_blank" rel="noreferrer" title="Instagram"><IoLogoInstagram /></a>
-            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noreferrer" title="WhatsApp"><PiWhatsappLogoDuotone /></a>
+            <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer" title="WhatsApp"><PiWhatsappLogoDuotone /></a>
           </div>
           <button className="scroll-top" onClick={scrollToTop} aria-label="Scroll to Top">
             <FaChevronUp />
