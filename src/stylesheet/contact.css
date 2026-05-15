@@ -1,0 +1,172 @@
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  padding: 80px 20px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-us {
+  font-size: clamp(2rem, 8vw, 3.5rem); /* Responsive Font */
+  font-weight: 800;
+  color: #fff;
+  text-shadow: white 0px 0px 7px, #fffffffa 0px 0px 80px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 1rem;
+  margin-top: 10px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contact-form-side {
+  flex: 1.5;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-form-side input, 
+.contact-form-side textarea {
+  width: 100%;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  padding: 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.full-input { margin-top: 0px; }
+
+.contact-form-side input:focus, 
+.contact-form-side textarea:focus {
+  border-color: #3853ff;
+  box-shadow: 0 0 15px rgba(56, 83, 255, 0.1);
+}
+
+.contact-form-side textarea {
+  height: 150px;
+  margin-top: 15px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background: #fff;
+  color: #000;
+  width: 100%; /* Mobile pe full width button acha lagta hai */
+  max-width: 200px;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #3853ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Info Side */
+.contact-info-side {
+  flex: 1;
+  width: 100%;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #111;
+}
+
+.info-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(56, 83, 255, 0.1);
+  color: #3853ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.info-content h4 { color: #fff; font-size: 1rem; margin-bottom: 2px; }
+.info-content p { color: #888; font-size: 0.9rem; }
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 200px;
+  border: 1px solid #222;
+  filter: grayscale(1) invert(1) opacity(0.5);
+}
+
+/* --- MOBILE SPECIFIC --- */
+
+@media (max-width: 850px) {
+  .contact-wrapper {
+    flex-direction: column; /* Form upar, Info niche */
+  }
+
+  .input-row {
+    flex-direction: column; /* Name aur Email ek ke niche ek */
+    gap: 15px;
+  }
+
+  .submit-btn {
+    max-width: 100%; /* Button full width on mobile */
+  }
+
+  .contact-info-side {
+    margin-top: 20px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile pe list */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-height { padding: 60px 15px; }
+  .contact-us { font-size: 2.2rem; }
+  .map-container { height: 180px; }
+} 

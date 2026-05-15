@@ -1,0 +1,180 @@
+.projects {
+  padding: 100px 8%;
+  background: #000000;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-title {
+  text-shadow: white 0px 0px 7px, #fffffffa 0px 0px 80px; 
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.projects-title span {
+  color: #ffffff;
+  text-shadow: white 0px 0px 7px, #fffffffa 0px 0px 80px; 
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #3a3b3f;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* Desktop Grid Logic */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 20px;
+  padding: 40px 30px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  border-color: #3853ff;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 83, 255, 0.1);
+}
+
+.project-number {
+  font-size: 0.9rem;
+  color: #3853ff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.short-desc {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.tech-badge {
+  background: #111;
+  border: 1px solid #222;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  border-radius: 100px;
+  color: #ccc;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  color: #555;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  color: #fff;
+}
+
+/* Hover Overlay Logic (Retained all features) */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(56, 83, 255, 0.95);
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease-in-out;
+  z-index: 10;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text h4 { font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
+.overlay-text p { font-size: 0.9rem; line-height: 1.5; color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; }
+
+.view-btn {
+  padding: 10px 20px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.view-btn a { color: #3853ff; text-decoration: none; }
+
+/* --- MOBILE UPGRADE --- */
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 0 60px 20px; /* Slider edge-to-edge look */
+  }
+
+  .projects-slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Magnetic feeling */
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  /* Hide Scrollbar but keep functionality */
+  .projects-slider-container::-webkit-scrollbar { display: none; }
+
+  .projects-grid {
+    display: flex; /* Force side-by-side */
+    grid-template-columns: none;
+    gap: 20px;
+    padding-right: 20px; /* End spacing */
+  }
+
+  .project-card {
+    min-width: 280px; /* Set a comfortable width for mobile */
+    max-width: 80vw;
+    scroll-snap-align: center; /* Card will center itself */
+    flex-shrink: 0;
+    padding: 30px 20px;
+  }
+
+  .projects-title { font-size: 2.2rem; text-align: left; }
+  .underline { margin: 10px 0 60px 0; }
+}

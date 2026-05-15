@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+*{
+
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.blue-shadow{
+-webkit-box-shadow: -35px 33px 200px 70px rgba(54, 186, 219, 0.504);
+-moz-box-shadow: -35px 33px 200px 70px rgba(54, 186, 219, 0.504);
+box-shadow: -35px 33px 200px 70px rgba(54, 186, 219, 0.504);
+}
+
+.pink-shadow{
+-webkit-box-shadow: -35px 33px 200px 70px rgba(187, 59, 174, 0.392);
+-moz-box-shadow: -35px 33px 200px 70px rgba(187, 59, 174, 0.392);
+box-shadow: -35px 33px 200px 70px rgba(187, 59, 174, 0.392);
+}
+
+
+body{
+    background: #000;
+}

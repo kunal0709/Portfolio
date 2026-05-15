@@ -1,0 +1,96 @@
+.about-main {
+  background-color: #000;
+  color: #eaeaea;
+  min-height: 80vh;
+  display: flex;
+  padding: 80px 120px;
+  gap: 40px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* LEFT SIDE (Original UI) */
+.left-about {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about {
+  text-shadow: white 0px 0px 7px, #fffffffa 0px 0px 80px;
+  margin-left: 250px; /* Original Desktop Margin */
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* RIGHT SIDE (Original UI) */
+.right-about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right-about img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  background: transparent;
+  object-fit: cover;
+}
+
+/* 📱 Mobile Responsive Fix (Image niche, UI Same) */
+@media (max-width: 1200px) {
+  .about {
+    margin-left: 0; /* Tablet par margin adjust kiya taaki text na kate */
+  }
+}
+
+@media (max-width: 992px) {
+  .about-main {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-main {
+    flex-direction: column; /* Stack layout */
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .about {
+    margin-left: 0; /* Mobile par centered/left aligned better lagta hai */
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .left-about {
+    order: 1; /* Text pehle aayega */
+    font-size: 16px;
+    text-align: center; /* Mobile par readable banane ke liye */
+  }
+
+  .right-about {
+    order: 2; /* Image ab niche aayegi */
+    width: 100%;
+  }
+
+  .right-about img {
+    height: 400px; /* Mobile par thodi kam height */
+    width: 100%;
+    max-width: 400px; /* Image zyada badi na ho phone par */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    font-size: 28px;
+  }
+  
+  .right-about img {
+    height: 300px;
+  }
+}
