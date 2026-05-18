@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import SkillPage from "./pages/SkillPage";
 import Projects from "./components/Project";
 import Footer from "./components/Footer";
+
 const App = () => {
   return (
     <div>

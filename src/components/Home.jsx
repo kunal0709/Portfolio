@@ -5,7 +5,7 @@ import "../stylesheet/home.css";
 import { FiArrowDownRight, FiArrowRight } from "react-icons/fi";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
-
+import resume from "../../public/resume.pdf";
 const Hero = () => {
   const heroRef = useRef();
 
@@ -66,9 +66,11 @@ const Hero = () => {
                 </button>
               </Link>
 
-              <button className="secondary-btn">
-                Resume <FiArrowDownRight />
-              </button>
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                <button className="secondary-btn">
+                  Resume <FiArrowDownRight />
+                </button>
+              </a>
             </div>
           </div>
         </div>
