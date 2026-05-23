@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           <p className="location-tag">
-            Based in India / {new Date().getHours() >= 12 ? "PM" : "AM"}
+            Based in India /
           </p>
         </div>
 
